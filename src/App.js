@@ -1,15 +1,33 @@
 import "./styles.css";
+
 import React from "react";
 
 export default function App() {
   return (
-    <Navbar>
-      <DropLink link="Products" link1="Link1" link2="Link2" link3="Link3" />
+    <>
+      {/*BLUE */}
+      <Navbar>
+        <Logo link="LOGO" />
+        <DropLink link="PRODUCTS" link1="Link1" link2="Link2" link3="Link3" />
 
-      <NavbarLinks link="Services" />
-      <NavbarLinks link="Join Us" />
-      <NavItem link="Login" />
-    </Navbar>
+        <NavbarLinks link="OUR-WORKS" />
+        <NavbarLinks link="SERVICES " />
+        <NavbarLinks link="JOIN US " />
+        <NavItem link="LOGIN" />
+        <NavItem link="SIGN UP" />
+      </Navbar>
+      <br />
+      <br />
+    </>
+  );
+}
+
+function Logo(props) {
+  return (
+    <div className="logo">
+      <h2>{props.link}</h2>
+      {/* <img className="logo-img" alt="logo" /> */}
+    </div>
   );
 }
 
@@ -23,14 +41,15 @@ function Navbar(props) {
 function DropLink(props) {
   return (
     <div className="dropdown">
-      <button className="dropdown-btn">
-        <div className="nav-links">
-          <h2>
-            {props.link}
+      <div className="nav-links">
+        <button className="dropdown-btn">
+          <div className="drop-link">
+            <h2>{props.link}</h2>
             <i className="fas fa-caret-down" />
-          </h2>
-        </div>
-      </button>
+          </div>
+        </button>
+      </div>
+
       <div className="dropdown-content">
         <a className="drop-item" href="#">
           {props.link1}
@@ -49,17 +68,20 @@ function NavbarLinks(props) {
   return (
     <>
       <div className="nav-links">
-        <h2>{props.link}</h2>
+        <ul className="nav">
+          <li>{props.link}</li>
+        </ul>
       </div>
     </>
   );
 }
 function NavItem(props) {
   return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
+    <li className="buttons">
+      <button class="btn-hover color-1">{props.link}</button>
+      {/* <a href="#" className="icon-button"> 
         {props.link}
-      </a>
+  </a>*/}
     </li>
   );
 }
