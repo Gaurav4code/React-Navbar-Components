@@ -7,17 +7,65 @@ export default function App() {
     <>
       {/*BLUE */}
       <Navbar>
-        <Logo link="LOGO" />
-        <DropLink link="PRODUCTS" link1="Link1" link2="Link2" link3="Link3" />
+        <div className="panel">
+          <div>
+            <Logo link="LOGO" />
+          </div>
+          <div className="navbar-links">
+            <ul>
+              <DropLink
+                link="PRODUCTS"
+                link1="Link1"
+                link2="Link2"
+                link3="Link3"
+              />
 
-        <NavbarLinks link="OUR-WORKS" />
-        <NavbarLinks link="SERVICES " />
-        <NavbarLinks link="JOIN US " />
-        <NavItem link="LOGIN" />
-        <NavItem link="SIGN UP" />
+              <NavbarLinks link="OUR-WORKS" />
+              <NavbarLinks link="SERVICES " />
+              <NavbarLinks link="JOIN US " />
+            </ul>
+          </div>
+          <div className="bar-btn">
+            <NavItem link="LOGIN" />
+            <NavItem link="SIGN UP" />
+          </div>
+        </div>
       </Navbar>
+
       <br />
       <br />
+      <br />
+
+      {/* <Navbar>
+        <div className="panel">
+          <div>
+            <Logo link="LOGO" />
+          </div>
+
+          <div className="navbar-links">
+            <DropLink
+              link="PRODUCTS"
+              link1="Link1"
+              link2="Link2"
+              link3="Link3"
+            />
+            <DropLink
+              link="PRODUCTS"
+              link1="Link1"
+              link2="Link2"
+              link3="Link3"
+            />
+
+            <NavbarLinks link="OUR-WORKS" />
+            <NavbarLinks link="SERVICES " />
+            <NavbarLinks link="JOIN US " />
+          </div>
+          <div className="bar-btn">
+            <NavItem link="LOGIN" />
+            <NavItem link="SIGN UP" />
+          </div>
+        </div>
+      </Navbar> */}
     </>
   );
 }
